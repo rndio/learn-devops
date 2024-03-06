@@ -21,12 +21,3 @@ jobs:
         remote_user: ${{ secrets.DEPLOY_USER }}
         remote_port: ${{ secrets.DEPLOY_PORT }}
         remote_key: ${{ secrets.DEPLOY_KEY }}
-
-    # - name: ⚙️ Initialize SSH
-    #   uses: webfactory/ssh-agent@v0.9.0
-    #   with:
-    #     ssh-private-key: ${{ secrets.DEPLOY_KEY }}
-
-    # - name: 🚂 Deploy and run Composer
-    #   run: | 
-    #     ssh -o StrictHostKeyChecking=no -p ${{ secrets.DEPLOY_PORT }} ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} 'mv ${{ secrets.DEPLOY_PATH }}/public ${{ secrets.DEPLOY_PATH }}/public_html && cd ${{ secrets.DEPLOY_PATH }} && composer2 install && ln -s ${{ secrets.DEPLOY_PATH }}/storage/app/public ${{ secrets.DEPLOY_PATH }}/public_html/storage'
